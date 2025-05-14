@@ -1,0 +1,25 @@
+package in.bookapp;
+
+import java.io.IOException;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/bookServlet")
+public class BookServlet extends HttpServlet {
+
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)throws IOException {
+		
+		String bookId = req.getParameter("bookId");
+		String bookName = req.getParameter("bookName");
+		String bookPrice = req.getParameter("bookPrice");
+		
+		System.out.println(bookId);
+		System.out.println(bookName);
+		System.out.println(bookPrice);
+		
+	}
+	
+}
